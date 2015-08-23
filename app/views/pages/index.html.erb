@@ -1,0 +1,36 @@
+<%= link_to('back to subject', {controller: 'subjects', action: 'index'} , :class => 'new') %>
+
+<div class="pages index">
+  <h2>Pages</h2>
+
+  <%= link_to('Add new page', {action: 'new', subject_id: @subject.id } , :class => 'action new') %>
+
+  <table class="listing" summary="pages list">
+    <tr class="header">
+
+      <th>subject</th>
+      <th>name</th>
+      <th>permalink</th>
+      <th>position</th>
+      <th>visible</th>
+      <th>sections</th>
+      <th>Actions</th>
+    </tr>
+    <% @pages.each do |page| %>
+    <tr>
+      <td><%= page.subject.name if page.subject %></td>
+      <td><%= page.name %></td>
+      <td><%= page.permalink %></td>
+      <td><%= page.position %></td>
+      <td class="center"><%= page.visible ? 'Yes' : 'No' %></td>
+      <td><%= page.sections.size %></td>
+      <td class="actions">
+        <%= link_to 'sections', {controller: 'sections', action: 'index', page_id: page.id}, class: 'action show'%>
+        <%= link_to('Show',{action: 'show', id: page.id, subject_id: @subject.id}, :class => 'action show') %>
+        <%= link_to('Edit', {action: 'edit', id: page.id, subject_id: @subject.id}, class: 'action edit') %>
+        <%= link_to('Delete', {action: 'destroy', id: page.id, subject_id: @subject.id}, data: {confirm: "are u sure ?"} , class: 'action delete') %>
+      </td>
+    </tr>
+    <% end %>
+  </table>
+</div>

@@ -1,0 +1,11 @@
+<h2><%= @page.name %></h2>
+<% @page.sections.sorted.each do |section| %>
+  <div class="section">
+    <% case section.content_type %>
+      <% when 'html'%>
+        <%= raw(sanitize section.content, tags: %w'strong em a') %>
+      <% when 'text' %>
+        <%= section.content %>
+    <% end %>
+  </div>
+<%end%>

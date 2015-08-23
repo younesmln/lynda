@@ -1,0 +1,28 @@
+<% @page_title = 'admin user list' %>
+<%= link_to 'menu', controller: 'session' %>
+<div class="admin index">
+  <h2>admins</h2>
+
+  <%= link_to('Add New admin', {action: 'new'} , :class => 'action new') %>
+
+  <table class="listing" summary="admin list">
+    <tr class="header">
+      <!--<th>&nbsp;</th>-->
+      <th>name</th>
+      <th>username</th>
+      <th>email</th>
+      <th>Actions</th>
+    </tr>
+    <% @admin_users.each do |admin| %>
+        <tr>
+          <td><%= admin.name %></td>
+          <td><%= admin.username %></td>
+          <td><%=  mail_to admin.email %></td>
+          <td class="actions">
+            <%= link_to('Edit', {action: 'edit', id: admin.id }, class: 'action edit') %>
+            <%= link_to('Delete', {action: 'destroy', id: admin.id}, data: {confirm: "are u sure ?"} , class: 'action delete') %>
+          </td>
+        </tr>
+    <% end %>
+  </table>
+</div>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="dataSourceStorageLocal">
+    <data-source name="Rails lynda: development" uuid="cd61dde8-5526-4ac3-a67f-7063eb21f951">
+      <user-name>younes</user-name>
+      <user-password>dfd3dfc5dfdfdfc4dfcfdfd9</user-password>
+      <schema-pattern>simple_development.*</schema-pattern>
+      <default-schemas>simple_development.*</default-schemas>
+    </data-source>
+    <data-source name="Rails lynda: test" uuid="23aefe3e-df1b-479a-afef-11defef8ef7d">
+      <first-sync>true</first-sync>
+      <user-name>younes</user-name>
+      <user-password>dfd3dfc5dfdfdfc4dfcfdfd9</user-password>
+    </data-source>
+    <data-source name="Rails lynda: production" uuid="373427fb-2d1e-46bd-bc23-50c0266ada92">
+      <first-sync>true</first-sync>
+      <user-name>tester1</user-name>
+      <user-password>df96df8fdf97df8adfefdfe4dffcdff1df8ddffedfefdff9dffedfefdff8df9bdff5dfeedfebdffedfebdfe8dfebdff9dfefdff5dffadfebdff9dff9dffddfe5dff8dfeedf8ddff7df8adf8fdf94</user-password>
+    </data-source>
+  </component>
+</project>

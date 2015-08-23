@@ -1,0 +1,8 @@
+<%= link_to("<< Back to List", {:action => 'index', subject_id: @subject.id}, :class => 'back-link') %>
+
+<%= form_for :page, url: {action: 'create', subject_id: @subject.id} do |f|%>
+    <%= render partial: 'form', locals: {f: f}%>
+    <div>
+      <%= submit_tag 'Create' %>
+    </div>
+<%end%>

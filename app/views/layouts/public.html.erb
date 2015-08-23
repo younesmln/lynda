@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Simple Cms<%= " | #{@page_title}" if @page_title %> </title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+    <div id="header">
+      <h1>Simple CMS</h1>
+    </div>
+
+    <div id="main">
+      <div id="navigation">
+        <%= render partial: 'application/navigation', locals: {subjects: @subjects}%>
+      </div>
+      <div id="content">
+        <%= yield %>
+      </div>
+      <div class="clear">
+      </div>
+    </div>
+
+    <div id="footer">
+      <p id="copyright">&copy; younes meliani </p>
+    </div>
+</body>
+</html>

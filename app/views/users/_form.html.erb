@@ -1,0 +1,29 @@
+<%= error_message_for @admin%>
+<table>
+  <tr>
+    <th><%= f.label :first_name %></th>
+    <td><%= f.text_field :first_name%></td>
+  </tr>
+  <tr>
+    <th><%= f.label :last_name %></th>
+    <td><%= f.text_field :last_name%></td>
+  </tr>
+  <tr>
+    <th><%= f.label :username %></th>
+    <td><%= f.text_field :username %></td>
+  </tr>
+  <tr>
+    <th><%= f.label :email %></th>
+    <td><%= f.text_field :email %></td>
+  </tr>
+  <tr>
+    <th><%= f.label :password %></th>
+    <td><%= f.text_field :password , value: ''%></td>
+  </tr>
+    <% if create %>
+      <tr>
+        <th><%= f.label :password_confirmation %></th>
+        <td><%= f.text_field :password_confirmation , value: ''%></td>
+      </tr>
+    <%end%>
+</table>

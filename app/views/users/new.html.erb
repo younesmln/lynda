@@ -1,0 +1,8 @@
+<%= link_to 'back to list', :back, :class => 'back-link'%>
+
+<%= form_for @admin, url: {action: 'create'} do |f| %>
+    <%= render partial: 'form', locals: {f: f, create: true}%>
+    <div>
+      <%= submit_tag 'Create' %>
+    </div>
+<% end %>
